@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    position: relative;
+}
+
 .title {
     color: red;
 }
@@ -25,4 +29,9 @@
 
 .current-menu-item {
     background: #333;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
 }
