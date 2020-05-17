@@ -7,12 +7,17 @@
     <?php wp_head(); ?>
 </head>
 <body>
-<header class="bg-secondary">
-    <div class="container">
-    <?php
-        wp_nav_menu(
-            array('theme-location' => 'top-menu')
-        )
-    ?>
+<header class="mb-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a href="<?php echo get_home_url(); ?>">
+            <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="Logo">
+        </a>
+        <div class="">
+            <?php
+                wp_nav_menu(
+                    array('theme-location' => 'top-menu')
+                )
+            ?>
+        </div>
     </div>
 </header>

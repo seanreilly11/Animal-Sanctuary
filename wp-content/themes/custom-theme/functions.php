@@ -46,6 +46,15 @@ register_nav_menus(
           'after_title' => '</h4>'
         )
       );
+
+      register_sidebar(
+        array(
+          'name' => 'Home Sidebar',
+          'id' => 'home-sidebar',
+          'before_title' => '<h4 class="widget-title">',
+          'after_title' => '</h4>'
+        )
+      );
   
       register_sidebar(
           array(
@@ -58,5 +67,41 @@ register_nav_menus(
   }
   
   add_action('widgets_init', 'my_sidebars');
+
+// custom post type
+function add_animals_post(){
+  $args = array(
+    'labels' => array(
+        'name' => 'Animals',
+        'singular_name' => 'Animals',
+    ),
+  'hierarchical' => true, //boolean value toggles between pages & posts without labels
+  'menu_icon' => 'dashicons-carrot',//get icon name from wordpress dashicons
+  'public' => true,
+  'has_archive' => true,
+  'supports' => array('title','editor','thumbnail','custom-fields' ),// if one of the argument is  not mentioned,
+  //if makes difference in features
+
+);
+  register_post_type('animals',$args);
+}
+
+add_action('init','add_animals_post');
+
+// custom taxonomy
+  function animals_taxonomy(){
+    $args = array(
+      'labels' => array(
+          'name' => 'Families',
+          'singular_name' => 'Family',
+      ),
+    'hierarchical' => true, //boolean value toggles between pages & posts without labels
+    'public' => true,
+  
+  );
+    register_taxonomy('families',array('animals'), $args);
+  }
+  
+  add_action('init','animals_taxonomy');
 
 ?>
