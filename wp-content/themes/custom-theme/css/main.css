@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    color: red;
+}
+
+#menu-top-menu {
+    display: flex;
+    list-style: none;
+}
+
+#menu-top-menu li {
+    /* margin: 0 0.5rem; */
+    padding: 0.5rem 1.5rem;
+}
+
+#menu-top-menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.current-menu-item {
+    background: #333;
+}
