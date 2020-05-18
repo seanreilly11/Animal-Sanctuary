@@ -1,28 +1,23 @@
 <?php get_header(); ?>
 
 <section class="page-wrap">
-<div class="container">
+  <div class="container">
+    <section class="row">
+      <div class="col-lg-9">
+        <h1 class="title"> <?php the_title(); ?>   </h1>
 
-  <section class="row">
-  <div class="col-lg-9">
+        <?php if(has_post_thumbnail()): ?>
+          <img src="<?php the_post_thumbnail_url('blog-large'); ?>" alt="<?php the_title(); ?>" class="mb-3 img-thumbnail">
+        <?php endif; ?>
 
-      <h1 class="title"> <?php the_title(); ?>   </h1>
-
-      <?php if(has_post_thumbnail()): ?>
-          This has a featured image
-          <div>
-            <img src="<?php the_post_thumbnail_url('blog-large'); ?>" alt="<?php the_title(); ?>" class="mb-3 img-fluid img-thumbnail">
-          </div>
-    <?php endif; ?>
-
-      <?php get_template_part('includes/section','content'); ?>
-    </div>
-    <div class="col-lg-3 widget">
-
-      <?php if(is_active_sidebar('page-sidebar')) :
-        dynamic_sidebar('page-sidebar');
-        endif; ?>
-    </div>
-</div>
+        <?php get_template_part('includes/section','content'); ?>
+      </div>
+      <div class="col-lg-3 widget">
+        <?php if(is_active_sidebar('page-sidebar')) :
+          dynamic_sidebar('page-sidebar');
+          endif; ?>
+      </div>
+    </section>
+  </div>
 </section>
 <?php get_footer(); ?>

@@ -9,10 +9,6 @@ body {
     min-height: 100vh;
 }
 
-.title {
-    /* color: ; */
-}
-
 #menu-top-menu {
     display: flex;
     list-style: none;
@@ -47,6 +43,10 @@ body {
 
 .logo {
     max-width: 150px;
+}
+
+.single-img {
+    margin: 0 1rem 1rem 0;
 }
 
 .widget {

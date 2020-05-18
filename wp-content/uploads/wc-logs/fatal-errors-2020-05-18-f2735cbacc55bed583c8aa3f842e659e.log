@@ -1,0 +1,9 @@
+2020-05-18T10:02:40+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function get_the_terms(), 0 passed in C:\wamp64\www\wp-f4.1\wp-content\themes\custom-theme\single-animals.php on line 13 and exactly 2 expected in C:\wamp64\www\wp-f4.1\wp-includes\category-template.php:1236
+Stack trace:
+#0 C:\wamp64\www\wp-f4.1\wp-content\themes\custom-theme\single-animals.php(13): get_the_terms()
+#1 C:\wamp64\www\wp-f4.1\wp-includes\template-loader.php(106): include('C:\\wamp64\\www\\w...')
+#2 C:\wamp64\www\wp-f4.1\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\w...')
+#3 C:\wamp64\www\wp-f4.1\index.php(17): require('C:\\wamp64\\www\\w...')
+#4 {main}
+  thrown in C:\wamp64\www\wp-f4.1\wp-includes\category-template.php on line 1236
+
