@@ -23,11 +23,11 @@ body {
     text-decoration: none;
 }
 
-.current-menu-item {
+#menu-top-menu .current-menu-item {
     position: relative;
 }
 
-.current-menu-item::after {
+#menu-top-menu .current-menu-item::after {
     position: absolute;
     content: "";
     background: #3cb42c;
@@ -38,7 +38,7 @@ body {
 }
 
 .page-wrap {
-    padding-bottom: 9rem;
+    padding-bottom: 10.5rem;
 }
 
 .logo {
@@ -57,4 +57,23 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+#menu-top-menu-1 {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+#menu-top-menu-1 li {
+    padding: 1rem;
+}
+
+#menu-top-menu-1 li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#menu-top-menu-1 li:hover {
+    background: #333;
 }

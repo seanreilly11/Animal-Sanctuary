@@ -58,8 +58,8 @@ register_nav_menus(
   
       register_sidebar(
           array(
-            'name' => 'Blog Sidebar',
-            'id' => 'blog-sidebar',
+            'name' => 'Footer Sidebar',
+            'id' => 'footer-sidebar',
             'before_title' => '<h4 class="widget-title">',
             'after_title' => '</h4>'
           )
